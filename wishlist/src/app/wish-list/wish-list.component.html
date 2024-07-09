@@ -1,15 +1,9 @@
 <div class="text-danger" *ngIf="wishes.length === 0; else showItems">
-  There are no wishes the display.
+  There are no wishes to display.
 </div>
 
 <ng-template #showItems>
   <ul class="wish-list">
-    <li *ngFor="let item of wishes; index as ii">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="checkbox" type="checkbox" [checked]="item.isComplate" [attr.data-index]="ii" (click)="toggleItem(item)"> {{item.wishText}}
-        </label>
-      </div>
-    </li>
+    <wish-list-item *ngFor="let wish of wishes" [wishText]="wish.wishText" [(fullfilled)]="wish.isComplate"></wish-list-item>
   </ul>
 </ng-template>

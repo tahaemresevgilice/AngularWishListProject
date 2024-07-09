@@ -8,12 +8,8 @@ import { WishItem } from 'src/shared/models/wishtitem';
 })
 export class WishListComponent implements OnInit {
   @Input() wishes: WishItem[] = [];
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
-  toggleItem(item:WishItem){
-    item.isComplate =!item.isComplate;
-    console.log(item)
-  }
+  ngOnInit(): void { }
 }
