@@ -14,6 +14,10 @@ export class WishListItemComponent implements OnInit {
   @Output() fullfilledChange = new EventEmitter<boolean>();
   constructor() { }
 
+  get cssClasses() {
+    // return this.fullfilled ?['strikeout','text-muted'] : [];
+    return {'strikeout text-muted':this.fullfilled}
+  }
   ngOnInit(): void {
   }
 
