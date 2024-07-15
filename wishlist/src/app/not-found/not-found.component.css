@@ -1,0 +1,55 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.error-container {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error-container .display-1 {
+  font-size: 10rem;
+  animation: fadeInDown 1s;
+}
+
+.error-container .lead {
+  font-size: 1.5rem;
+  animation: fadeIn 2s;
+}
+
+.error-container .btn {
+  animation: fadeInUp 1.5s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
